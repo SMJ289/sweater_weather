@@ -27,15 +27,8 @@ class Api::V1::ForecastController < ApplicationController
     end
 
     weather_json = JSON.parse(weather_resp.body, symbolize_names: true)
+    current = CurrentWeather.new(weather_json)
 
-    current_temp = weather_json[:current][:temp]
-    feels_like = weather_json[:current][:feels_like]
-    humidity = weather_json[:current][:humidity]
-    sunrise = weather_json[:current][:sunrise]
-    sunset = weather_json[:current][:sunset]
-    uv_index = weather_json[:current][:uvi]
-    visibility = weather_json[:current][:visibility]
-    type = weather_json[:current][:weather].first[:main]
     binding.pry
   end
 end
