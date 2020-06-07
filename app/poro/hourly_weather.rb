@@ -10,7 +10,7 @@ class HourlyWeather
   end
 
   def format_time(dt)
-    Time.at(dt).strftime('%I:%M:%S %p')
+    Time.at(dt).strftime('%I:%M %p')
   end
 
   def kelvin_to_fahrenheit(temp)
