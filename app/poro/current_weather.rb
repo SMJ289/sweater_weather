@@ -17,7 +17,7 @@ class CurrentWeather
   def initialize(data)
     @time = format_time(data[:current][:dt])
     @date = format_date(data[:current][:dt])
-    @current_temp = data[:current][:temp]
+    @current_temp = kelvin_to_fahrenheit(data[:current][:temp])
     @high = kelvin_to_fahrenheit(data[:daily].first[:temp][:max])
     @low = kelvin_to_fahrenheit(data[:daily].first[:temp][:min])
     @feels_like = kelvin_to_fahrenheit(data[:current][:feels_like])

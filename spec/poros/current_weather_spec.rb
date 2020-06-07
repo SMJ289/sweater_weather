@@ -137,7 +137,7 @@ RSpec.describe CurrentWeather do
   it '.initialize()' do
     expect(@current_weather.date).to eq("June 06")
     expect(@current_weather.time).to eq("09:48 PM")
-    expect(@current_weather.current_temp).to eq(290.96)
+    expect(@current_weather.current_temp).to eq(64)
     expect(@current_weather.feels_like).to eq(62)
     expect(@current_weather.high).to eq(67)
     expect(@current_weather.low).to eq(64)
