@@ -140,6 +140,7 @@ RSpec.describe CurrentWeather do
     expect(@current_weather.high).to eq(67)
     expect(@current_weather.low).to eq(64)
     expect(@current_weather.type).to eq('Clear')
+    expect(@current_weather.icon).to eq('01n')
     expect(@current_weather.humidity).to eq(51)
     expect(@current_weather.visibility).to eq(12856)
     expect(@current_weather.uv_index).to eq(10.74)

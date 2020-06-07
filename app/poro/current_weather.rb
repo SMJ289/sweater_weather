@@ -8,7 +8,9 @@ class CurrentWeather
               :sunset,
               :uv_index,
               :visibility,
-              :type
+              :type,
+              :icon,
+              :id
 
   def initialize(data)
     @current_temp = data[:current][:temp]
@@ -21,6 +23,8 @@ class CurrentWeather
     @uv_index = data[:current][:uvi]
     @visibility = data[:current][:visibility]
     @type = data[:current][:weather].first[:main]
+    @icon = data[:current][:weather].first[:icon]
+    @id = 1
   end
 
   def kelvin_to_fahrenheit(temp)
