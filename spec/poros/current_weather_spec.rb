@@ -135,6 +135,8 @@ RSpec.describe CurrentWeather do
   end
 
   it '.initialize()' do
+    expect(@current_weather.date).to eq("June 06")
+    expect(@current_weather.time).to eq("09:48 PM")
     expect(@current_weather.current_temp).to eq(290.96)
     expect(@current_weather.feels_like).to eq(62)
     expect(@current_weather.high).to eq(67)
@@ -144,11 +146,19 @@ RSpec.describe CurrentWeather do
     expect(@current_weather.humidity).to eq(51)
     expect(@current_weather.visibility).to eq(12856)
     expect(@current_weather.uv_index).to eq(10.74)
-    expect(@current_weather.sunrise).to eq(1591443141)
-    expect(@current_weather.sunset).to eq(1591496726)
+    expect(@current_weather.sunrise).to eq("05:32 AM")
+    expect(@current_weather.sunset).to eq("08:25 PM")
   end
 
   it '.kelvin_to_fahrenheit()' do
     expect(@current_weather.kelvin_to_fahrenheit(300)).to eq(80)
+  end
+
+  it '.format_time()' do
+    expect(@current_weather.format_time(1591501730)).to eq("09:48 PM")
+  end
+
+  it '.format_date()' do
+    expect(@current_weather.format_date(1591501730)).to eq("June 06")
   end
 end
