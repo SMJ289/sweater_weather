@@ -2,7 +2,7 @@ class Api::V1::ForecastController < ApplicationController
   def show
     google_conn = Faraday.new(
     url: 'https://maps.googleapis.com/',
-    params: {key: 'AIzaSyDD_vRouggV2CZtkVOqkn3gqircvkGx89w'},
+    params: {key: ENV['GOOGLE_API_KEY']},
     headers: {'Content-Type' => 'application/json'}
     )
 
@@ -16,7 +16,7 @@ class Api::V1::ForecastController < ApplicationController
 
     weather_conn = Faraday.new(
     url: 'https://api.openweathermap.org/',
-    params: {appid: '75837603333173536aeb4c7da22453a2'},
+    params: {appid: ENV['WEATHER_API_KEY']},
     headers: {'Content-Type' => 'application/json'}
     )
 
@@ -28,7 +28,6 @@ class Api::V1::ForecastController < ApplicationController
 
     weather_json = JSON.parse(weather_resp.body, symbolize_names: true)
     current = CurrentWeather.new(weather_json)
-
     binding.pry
   end
 end
