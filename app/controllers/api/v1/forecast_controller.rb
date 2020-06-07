@@ -23,11 +23,14 @@ class Api::V1::ForecastController < ApplicationController
     weather_resp = weather_conn.get('data/2.5/onecall') do |req|
       req.params['lat'] = lat
       req.params['lon'] = lon
-      req.params['exclude'] = 'minutely,hourly'
+      req.params['exclude'] = 'minutely'
     end
 
     weather_json = JSON.parse(weather_resp.body, symbolize_names: true)
-    current = CurrentWeather.new(weather_json)
-    binding.pry
+
+    forecast = Forecast.new(weather_json)
+
+    render json: ForecastSerializer.new(forecast)
+
   end
 end
