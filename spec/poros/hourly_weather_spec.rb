@@ -105,7 +105,7 @@ RSpec.describe DailyWeather do
     expect(@hourly_weather.length).to eq(48)
     expect(@hourly_weather.first.temp).to eq(87)
     expect(@hourly_weather.first.icon).to eq("01d")
-    expect(@hourly_weather.first.time).to eq("02:00 PM")
+    expect(@hourly_weather.first.time).to eq(" 2 PM")
   end
 
   it '.kelvin_to_fahrenheit()' do
@@ -113,6 +113,6 @@ RSpec.describe DailyWeather do
   end
 
   it '.format_time()' do
-    expect(@hourly_weather.first.format_time(1591560000)).to eq("02:00 PM")
+    expect(@hourly_weather.first.format_time(1591560000)).to eq(" 2 PM")
   end
 end
