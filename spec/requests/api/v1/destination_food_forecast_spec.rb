@@ -6,6 +6,10 @@ RSpec.describe 'Forcast API' do
     ending_location = "pueblo, co"
 
     get "/api/v1/foodie?start=#{starting_location}&end=#{ending_location}&search=italian"
+    json = JSON.parse(response.body, symbolize_names: true)
+
     expect(response).to be_successful
+    expect(json[:data][:attributes][:resturaunt]).to be_present
+    expect(json[:data][:attributes][:end_location]).to be_present
   end
 end
