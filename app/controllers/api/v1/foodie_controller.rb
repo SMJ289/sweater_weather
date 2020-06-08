@@ -8,23 +8,8 @@ class Api::V1::FoodieController < ApplicationController
     destination_weather = search_results.weather(params['end'])
     weather = DestinationWeather.new(destination_weather)
 
-    conn = Faraday.new(
-          url: 'https://developers.zomato.com/api/v2.1/',
-          headers: {'user-key' => ENV['ZOMATO_API_KEY']}
-          )
-
-    params['search'] = 55 if params['search'] = 'italian'
-
-    food_response = conn.get('search') do |req|
-      req.params['lat'] = travel.destination_lat
-      req.params['lon'] = travel.destination_lng
-      req.params['cuisines'] = params['search']
-      req.params['count'] = 1
-    end
-
-    json = JSON.parse(food_response.body, symbolize_names: true)
-
-    restaurant = DestinationRestaurant.new(json)
+    restaurant_search_results = RestaurantSearch.new
+    restaurant = restaurant_search_results.restaurant(params['search'],travel.destination_lat, travel.destination_lng)
 
 
     destination_info = DestinationInfo.new(travel, weather, restaurant)
