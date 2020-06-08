@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe 'Background image API' do
+RSpec.describe 'Background image API', :vcr do
   it 'returns an image url' do
     location = "madison, wi"
 
@@ -9,7 +9,7 @@ RSpec.describe 'Background image API' do
 
     background_json = JSON.parse(response.body, symbolize_names: true)
 
-    expect(forecast_json[:data][:attributes][:url]).to be_present
+    expect(background_json[:data][:attributes][:url]).to be_present
   end
 
 end
