@@ -3,7 +3,7 @@ require 'rails_helper'
 RSpec.describe GoogleService do
   describe 'intance methods' do
     context '#coordinates()' do
-      it 'returns coordinates' do
+      it 'returns coordinates', :vcr do
         service = GoogleService.new
         search = service.coordinates('portland, or')
 
