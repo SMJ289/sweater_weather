@@ -64,4 +64,14 @@ RSpec.configure do |config|
   config.filter_rails_from_backtrace!
   # arbitrary gems may also be filtered via:
   # config.filter_gems_from_backtrace("gem name")
+
+  VCR.configure do |config|
+    # config.ignore_hosts '127.0.0.1', 'localhost', 'chromedriver.storage.googleapis.com'
+    config.cassette_library_dir = "spec/fixtures/vcr_cassettes"
+    config.hook_into :webmock
+    config.filter_sensitive_data('<GOOGLE_API_KEY>') { ENV['GOOGLE_API_KEY'] }
+    config.filter_sensitive_data('<WEATHER_API_KEY>') { ENV['WEATHER_API_KEY'] }
+    config.filter_sensitive_data('<UNSPLASH_API_KEY>') { ENV['UNSPLASH_API_KEY'] }
+    config.configure_rspec_metadata!
+  end
 end
