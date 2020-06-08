@@ -1,6 +1,6 @@
 class ZomatoService
   def find_restaurant(search, lat, lon)
-    search = 55 if search = 'italian'
+    search = 55 if search == 'italian'
 
     response = conn.get('search') do |req|
       req.params['lat'] = lat
