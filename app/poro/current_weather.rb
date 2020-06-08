@@ -42,6 +42,7 @@ class CurrentWeather
   end
 
   def feet_to_miles(feet)
+    return 'n/a' if feet.nil?
     (feet / 5280).round
   end
 end
