@@ -13,7 +13,9 @@ RSpec.describe 'Forcast API' do
     expect(json[:data][:attributes][:travel][:destination_address]).to eq("Pueblo, CO, USA")
     expect(json[:data][:attributes][:forecast]).to be_present
     expect(json[:data][:attributes][:forecast][:current_temp]).to be_a Integer
+    expect(json[:data][:attributes][:forecast][:summary]).to be_present
     expect(json[:data][:attributes][:restaurant]).to be_present
     expect(json[:data][:attributes][:restaurant][:name]).to eq("Angelo's Pizza Parlor")
+    expect(json[:data][:attributes][:restaurant][:address]).to eq("105 E Riverwalk, Pueblo 81003")
   end
 end
