@@ -8,6 +8,6 @@ class TravelInfo
     @destination_address = data[:routes].first[:legs].first[:end_address]
     @destination_lat = data[:routes].first[:legs].first[:end_location][:lat]
     @destination_lng = data[:routes].first[:legs].first[:end_location][:lng]
-    @travel_time_seconds = data[:routes].first[:legs].first[:duration][:value]
+    @travel_time_seconds = data[:routes].first[:legs].first[:duration][:text]
   end
 end

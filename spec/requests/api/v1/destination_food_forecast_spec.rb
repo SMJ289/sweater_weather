@@ -9,7 +9,8 @@ RSpec.describe 'Forcast API' do
     json = JSON.parse(response.body, symbolize_names: true)
 
     expect(response).to be_successful
-    expect(json[:data][:attributes][:resturaunt]).to be_present
-    expect(json[:data][:attributes][:end_location]).to be_present
+    expect(json[:data][:attributes][:travel]).to be_present
+    expect(json[:data][:attributes][:forecast]).to be_present
+    expect(json[:data][:attributes][:restaurant]).to be_present
   end
 end

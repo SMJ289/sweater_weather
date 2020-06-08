@@ -2,28 +2,34 @@ class Api::V1::FoodieController < ApplicationController
   def show
 
     travel_info = GoogleService.new.travel_info(params['start'], params['end'])
-    travel_object = TravelInfo.new(travel_info)
+    travel = TravelInfo.new(travel_info)
     
     search_results = WeatherSearch.new
     destination_weather = search_results.weather(params['end'])
-    destination_weather_object = DestinationWeather.new(destination_weather)
+    weather = DestinationWeather.new(destination_weather)
 
     conn = Faraday.new(
           url: 'https://developers.zomato.com/api/v2.1/',
           headers: {'user-key' => ENV['ZOMATO_API_KEY']}
           )
-    
-    response = conn.get('search') do |req|
-      req.params['lat'] = travel_object.destination_lat
-      req.params['lon'] = travel_object.destination_lng
-      req.params['cuisines'] = 55
+
+    params['search'] = 55 if params['search'] = 'italian'
+
+    food_response = conn.get('search') do |req|
+      req.params['lat'] = travel.destination_lat
+      req.params['lon'] = travel.destination_lng
+      req.params['cuisines'] = params['search']
       req.params['count'] = 1
     end
 
-    json = JSON.parse(response.body, symbolize_names: true)
+    json = JSON.parse(food_response.body, symbolize_names: true)
 
-    restaurant_object = DestinationRestaurant.new(json)
-    binding.pry
+    restaurant = DestinationRestaurant.new(json)
+
+
+    destination_info = DestinationInfo.new(travel, weather, restaurant)
+
+    render json: FoodieSerializer.new(destination_info)
   end
 
 end
