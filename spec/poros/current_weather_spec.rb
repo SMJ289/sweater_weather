@@ -144,7 +144,7 @@ RSpec.describe CurrentWeather do
     expect(@current_weather.type).to eq('Clear')
     expect(@current_weather.icon).to eq('01n')
     expect(@current_weather.humidity).to eq(51)
-    expect(@current_weather.visibility).to eq(2)
+    expect(@current_weather.visibility).to eq(7)
     expect(@current_weather.uv_index).to eq(10.74)
     expect(@current_weather.sunrise).to eq("05:32 AM")
     expect(@current_weather.sunset).to eq("08:25 PM")
@@ -163,6 +163,6 @@ RSpec.describe CurrentWeather do
   end
 
   it '.format_date()' do
-    expect(@current_weather.feet_to_miles(15000)).to eq(2)
+    expect(@current_weather.meters_to_miles(15000)).to eq(9)
   end
 end
