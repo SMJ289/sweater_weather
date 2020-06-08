@@ -3,7 +3,7 @@ require 'rails_helper'
 RSpec.describe OpenWeatherService do
   describe 'intance methods' do
     context '#weather()' do
-      it 'returns weather forecast' do
+      it 'returns weather forecast', :vcr do
         service = OpenWeatherService.new
         search = service.weather('portland, or')
 

@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe 'Forcast API' do
-  it 'returns current weather data by city and state' do
+  it 'returns current weather data by city and state', :vcr do
     location = "seatle, wa"
 
     get "/api/v1/forecast?location=#{location}"
