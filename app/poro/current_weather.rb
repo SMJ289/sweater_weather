@@ -11,8 +11,7 @@ class CurrentWeather
               :uv_index,
               :visibility,
               :type,
-              :icon,
-              :id
+              :icon
 
   def initialize(data)
     @time = format_time(data[:current][:dt])
@@ -25,10 +24,9 @@ class CurrentWeather
     @sunrise = format_time(data[:current][:sunrise])
     @sunset = format_time(data[:current][:sunset])
     @uv_index = data[:current][:uvi]
-    @visibility = data[:current][:visibility]
+    @visibility = feet_to_miles(data[:current][:visibility])
     @type = data[:current][:weather].first[:main]
     @icon = data[:current][:weather].first[:icon]
-    @id = 1
   end
 
   def kelvin_to_fahrenheit(temp)
@@ -41,5 +39,9 @@ class CurrentWeather
 
   def format_date(dt)
     Time.at(dt).strftime('%B %d')
+  end
+
+  def feet_to_miles(feet)
+    (feet / 5280).round
   end
 end
