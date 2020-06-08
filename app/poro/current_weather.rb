@@ -24,7 +24,7 @@ class CurrentWeather
     @sunrise = format_time(data[:current][:sunrise])
     @sunset = format_time(data[:current][:sunset])
     @uv_index = data[:current][:uvi]
-    @visibility = feet_to_miles(data[:current][:visibility])
+    @visibility = meters_to_miles(data[:current][:visibility])
     @type = data[:current][:weather].first[:main]
     @icon = data[:current][:weather].first[:icon]
   end
@@ -41,8 +41,8 @@ class CurrentWeather
     Time.at(dt).strftime('%B %d')
   end
 
-  def feet_to_miles(feet)
-    return 'n/a' if feet.nil?
-    (feet / 5280).round
+  def meters_to_miles(meters)
+    return 'n/a' if meters.nil?
+    (meters / 1609).round
   end
 end
