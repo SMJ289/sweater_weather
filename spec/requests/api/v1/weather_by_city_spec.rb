@@ -21,7 +21,6 @@ RSpec.describe 'Forcast API' do
     expect(forecast_response[:data][:attributes][:current][:uv_index]).to be_present
     expect(forecast_response[:data][:attributes][:current][:visibility]).to be_present
     expect(forecast_response[:data][:attributes][:current][:type]).to be_present
-    expect(forecast_response[:data][:attributes][:current][:id]).to be_present
     
     expect(forecast_response[:data][:attributes][:daily].first[:date]).to be_present
     expect(forecast_response[:data][:attributes][:daily].first[:high]).to be_present
