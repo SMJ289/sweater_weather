@@ -1,0 +1,328 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://maps.googleapis.com/maps/api/geocode/json?address=portland,%20or&key=<GOOGLE_API_KEY>
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Content-Type:
+      - application/json
+      User-Agent:
+      - Faraday v1.0.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Mon, 08 Jun 2020 21:20:50 GMT
+      Pragma:
+      - no-cache
+      Expires:
+      - Fri, 01 Jan 1990 00:00:00 GMT
+      Cache-Control:
+      - no-cache, must-revalidate
+      Vary:
+      - Accept-Language
+      Access-Control-Allow-Origin:
+      - "*"
+      X-Goog-Maps-Metro-Area:
+      - Portland, OR
+      Server:
+      - mafe
+      X-Xss-Protection:
+      - '0'
+      X-Frame-Options:
+      - SAMEORIGIN
+      Server-Timing:
+      - gfet4t7; dur=40
+      Alt-Svc:
+      - h3-27=":443"; ma=2592000,h3-25=":443"; ma=2592000,h3-T050=":443"; ma=2592000,h3-Q050=":443";
+        ma=2592000,h3-Q049=":443"; ma=2592000,h3-Q048=":443"; ma=2592000,h3-Q046=":443";
+        ma=2592000,h3-Q043=":443"; ma=2592000,quic=":443"; ma=2592000; v="46,43"
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: ASCII-8BIT
+      string: |
+        {
+           "results" : [
+              {
+                 "address_components" : [
+                    {
+                       "long_name" : "Portland",
+                       "short_name" : "Portland",
+                       "types" : [ "locality", "political" ]
+                    },
+                    {
+                       "long_name" : "Multnomah County",
+                       "short_name" : "Multnomah County",
+                       "types" : [ "administrative_area_level_2", "political" ]
+                    },
+                    {
+                       "long_name" : "Oregon",
+                       "short_name" : "OR",
+                       "types" : [ "administrative_area_level_1", "political" ]
+                    },
+                    {
+                       "long_name" : "United States",
+                       "short_name" : "US",
+                       "types" : [ "country", "political" ]
+                    }
+                 ],
+                 "formatted_address" : "Portland, OR, USA",
+                 "geometry" : {
+                    "bounds" : {
+                       "northeast" : {
+                          "lat" : 45.6528856,
+                          "lng" : -122.4719641
+                       },
+                       "southwest" : {
+                          "lat" : 45.43254049999999,
+                          "lng" : -122.8366901
+                       }
+                    },
+                    "location" : {
+                       "lat" : 45.5051064,
+                       "lng" : -122.6750261
+                    },
+                    "location_type" : "APPROXIMATE",
+                    "viewport" : {
+                       "northeast" : {
+                          "lat" : 45.6528856,
+                          "lng" : -122.4719641
+                       },
+                       "southwest" : {
+                          "lat" : 45.43254049999999,
+                          "lng" : -122.8366901
+                       }
+                    }
+                 },
+                 "place_id" : "ChIJJ3SpfQsLlVQRkYXR9ua5Nhw",
+                 "types" : [ "locality", "political" ]
+              }
+           ],
+           "status" : "OK"
+        }
+  recorded_at: Mon, 08 Jun 2020 21:20:50 GMT
+- request:
+    method: get
+    uri: https://maps.googleapis.com/maps/api/geocode/json?address=portland,%20or&key=<GOOGLE_API_KEY>
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Content-Type:
+      - application/json
+      User-Agent:
+      - Faraday v1.0.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Mon, 08 Jun 2020 21:20:50 GMT
+      Pragma:
+      - no-cache
+      Expires:
+      - Fri, 01 Jan 1990 00:00:00 GMT
+      Cache-Control:
+      - no-cache, must-revalidate
+      Vary:
+      - Accept-Language
+      Access-Control-Allow-Origin:
+      - "*"
+      X-Goog-Maps-Metro-Area:
+      - Portland, OR
+      Server:
+      - mafe
+      X-Xss-Protection:
+      - '0'
+      X-Frame-Options:
+      - SAMEORIGIN
+      Server-Timing:
+      - gfet4t7; dur=42
+      Alt-Svc:
+      - h3-27=":443"; ma=2592000,h3-25=":443"; ma=2592000,h3-T050=":443"; ma=2592000,h3-Q050=":443";
+        ma=2592000,h3-Q049=":443"; ma=2592000,h3-Q048=":443"; ma=2592000,h3-Q046=":443";
+        ma=2592000,h3-Q043=":443"; ma=2592000,quic=":443"; ma=2592000; v="46,43"
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: ASCII-8BIT
+      string: |
+        {
+           "results" : [
+              {
+                 "address_components" : [
+                    {
+                       "long_name" : "Portland",
+                       "short_name" : "Portland",
+                       "types" : [ "locality", "political" ]
+                    },
+                    {
+                       "long_name" : "Multnomah County",
+                       "short_name" : "Multnomah County",
+                       "types" : [ "administrative_area_level_2", "political" ]
+                    },
+                    {
+                       "long_name" : "Oregon",
+                       "short_name" : "OR",
+                       "types" : [ "administrative_area_level_1", "political" ]
+                    },
+                    {
+                       "long_name" : "United States",
+                       "short_name" : "US",
+                       "types" : [ "country", "political" ]
+                    }
+                 ],
+                 "formatted_address" : "Portland, OR, USA",
+                 "geometry" : {
+                    "bounds" : {
+                       "northeast" : {
+                          "lat" : 45.6528856,
+                          "lng" : -122.4719641
+                       },
+                       "southwest" : {
+                          "lat" : 45.43254049999999,
+                          "lng" : -122.8366901
+                       }
+                    },
+                    "location" : {
+                       "lat" : 45.5051064,
+                       "lng" : -122.6750261
+                    },
+                    "location_type" : "APPROXIMATE",
+                    "viewport" : {
+                       "northeast" : {
+                          "lat" : 45.6528856,
+                          "lng" : -122.4719641
+                       },
+                       "southwest" : {
+                          "lat" : 45.43254049999999,
+                          "lng" : -122.8366901
+                       }
+                    }
+                 },
+                 "place_id" : "ChIJJ3SpfQsLlVQRkYXR9ua5Nhw",
+                 "types" : [ "locality", "political" ]
+              }
+           ],
+           "status" : "OK"
+        }
+  recorded_at: Mon, 08 Jun 2020 21:20:50 GMT
+- request:
+    method: get
+    uri: https://api.openweathermap.org/data/2.5/onecall?appid=<WEATHER_API_KEY>&exclude=minutely&lat=45.5051064&lon=-122.6750261
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Content-Type:
+      - application/json
+      User-Agent:
+      - Faraday v1.0.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - openresty
+      Date:
+      - Mon, 08 Jun 2020 21:20:50 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '14922'
+      Connection:
+      - keep-alive
+      X-Cache-Key:
+      - "/data/2.5/onecall?exclude=minutely&lat=45.51&lon=-122.68"
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Methods:
+      - GET, POST
+    body:
+      encoding: UTF-8
+      string: '{"lat":45.51,"lon":-122.68,"timezone":"America/Los_Angeles","timezone_offset":-25200,"current":{"dt":1591651250,"sunrise":1591618941,"sunset":1591675063,"temp":289.31,"feels_like":286.58,"pressure":1025,"humidity":67,"dew_point":283.19,"uvi":7.41,"clouds":90,"visibility":16093,"wind_speed":3.97,"wind_deg":226,"weather":[{"id":804,"main":"Clouds","description":"overcast
+        clouds","icon":"04d"}]},"hourly":[{"dt":1591650000,"temp":289.31,"feels_like":286.58,"pressure":1025,"humidity":67,"dew_point":283.19,"clouds":90,"wind_speed":3.97,"wind_deg":226,"weather":[{"id":804,"main":"Clouds","description":"overcast
+        clouds","icon":"04d"}]},{"dt":1591653600,"temp":290.37,"feels_like":287.33,"pressure":1024,"humidity":53,"dew_point":280.72,"clouds":93,"wind_speed":3.52,"wind_deg":227,"weather":[{"id":804,"main":"Clouds","description":"overcast
+        clouds","icon":"04d"}]},{"dt":1591657200,"temp":291,"feels_like":287.78,"pressure":1023,"humidity":45,"dew_point":278.92,"clouds":95,"wind_speed":3.21,"wind_deg":226,"weather":[{"id":804,"main":"Clouds","description":"overcast
+        clouds","icon":"04d"}]},{"dt":1591660800,"temp":292.16,"feels_like":288.65,"pressure":1021,"humidity":37,"dew_point":277.16,"clouds":97,"wind_speed":3.13,"wind_deg":243,"weather":[{"id":804,"main":"Clouds","description":"overcast
+        clouds","icon":"04d"}]},{"dt":1591664400,"temp":292.32,"feels_like":288.78,"pressure":1021,"humidity":35,"dew_point":276.51,"clouds":98,"wind_speed":3,"wind_deg":259,"weather":[{"id":804,"main":"Clouds","description":"overcast
+        clouds","icon":"04d"}]},{"dt":1591668000,"temp":291.64,"feels_like":288.34,"pressure":1021,"humidity":38,"dew_point":277.28,"clouds":99,"wind_speed":2.8,"wind_deg":264,"weather":[{"id":804,"main":"Clouds","description":"overcast
+        clouds","icon":"04d"}]},{"dt":1591671600,"temp":290.44,"feels_like":287.31,"pressure":1022,"humidity":41,"dew_point":277.36,"clouds":99,"wind_speed":2.57,"wind_deg":264,"weather":[{"id":804,"main":"Clouds","description":"overcast
+        clouds","icon":"04d"}]},{"dt":1591675200,"temp":289.14,"feels_like":286.05,"pressure":1022,"humidity":44,"dew_point":277.2,"clouds":99,"wind_speed":2.46,"wind_deg":265,"weather":[{"id":804,"main":"Clouds","description":"overcast
+        clouds","icon":"04n"}]},{"dt":1591678800,"temp":288.68,"feels_like":285.74,"pressure":1022,"humidity":47,"dew_point":277.56,"clouds":99,"wind_speed":2.39,"wind_deg":259,"weather":[{"id":804,"main":"Clouds","description":"overcast
+        clouds","icon":"04n"}]},{"dt":1591682400,"temp":287.85,"feels_like":284.37,"pressure":1022,"humidity":52,"dew_point":278.24,"clouds":99,"wind_speed":3.35,"wind_deg":235,"weather":[{"id":804,"main":"Clouds","description":"overcast
+        clouds","icon":"04n"}]},{"dt":1591686000,"temp":285.98,"feels_like":282.74,"pressure":1022,"humidity":66,"dew_point":280.01,"clouds":100,"wind_speed":3.51,"wind_deg":208,"weather":[{"id":500,"main":"Rain","description":"light
+        rain","icon":"10n"}],"rain":{"1h":0.41}},{"dt":1591689600,"temp":285.32,"feels_like":282.12,"pressure":1021,"humidity":73,"dew_point":280.77,"clouds":100,"wind_speed":3.73,"wind_deg":188,"weather":[{"id":500,"main":"Rain","description":"light
+        rain","icon":"10n"}],"rain":{"1h":0.38}},{"dt":1591693200,"temp":284.79,"feels_like":281.19,"pressure":1021,"humidity":75,"dew_point":280.67,"clouds":100,"wind_speed":4.26,"wind_deg":179,"weather":[{"id":500,"main":"Rain","description":"light
+        rain","icon":"10n"}],"rain":{"1h":0.49}},{"dt":1591696800,"temp":284.32,"feels_like":280.57,"pressure":1020,"humidity":78,"dew_point":280.79,"clouds":100,"wind_speed":4.51,"wind_deg":182,"weather":[{"id":501,"main":"Rain","description":"moderate
+        rain","icon":"10n"}],"rain":{"1h":1.11}},{"dt":1591700400,"temp":284.26,"feels_like":281.01,"pressure":1020,"humidity":79,"dew_point":280.94,"clouds":100,"wind_speed":3.85,"wind_deg":174,"weather":[{"id":501,"main":"Rain","description":"moderate
+        rain","icon":"10n"}],"rain":{"1h":1.58}},{"dt":1591704000,"temp":284.42,"feels_like":281.12,"pressure":1019,"humidity":77,"dew_point":280.68,"clouds":100,"wind_speed":3.84,"wind_deg":159,"weather":[{"id":501,"main":"Rain","description":"moderate
+        rain","icon":"10n"}],"rain":{"1h":1.95}},{"dt":1591707600,"temp":284.61,"feels_like":281.81,"pressure":1019,"humidity":76,"dew_point":280.67,"clouds":100,"wind_speed":3.12,"wind_deg":154,"weather":[{"id":500,"main":"Rain","description":"light
+        rain","icon":"10d"}],"rain":{"1h":0.46}},{"dt":1591711200,"temp":284.74,"feels_like":282.41,"pressure":1019,"humidity":78,"dew_point":281.17,"clouds":100,"wind_speed":2.62,"wind_deg":158,"weather":[{"id":500,"main":"Rain","description":"light
+        rain","icon":"10d"}],"rain":{"1h":0.98}},{"dt":1591714800,"temp":285.26,"feels_like":283.07,"pressure":1019,"humidity":76,"dew_point":281.23,"clouds":100,"wind_speed":2.46,"wind_deg":148,"weather":[{"id":804,"main":"Clouds","description":"overcast
+        clouds","icon":"04d"}]},{"dt":1591718400,"temp":285.61,"feels_like":283.45,"pressure":1019,"humidity":77,"dew_point":281.8,"clouds":100,"wind_speed":2.61,"wind_deg":167,"weather":[{"id":804,"main":"Clouds","description":"overcast
+        clouds","icon":"04d"}]},{"dt":1591722000,"temp":285.65,"feels_like":283.82,"pressure":1019,"humidity":80,"dew_point":282.34,"clouds":100,"wind_speed":2.36,"wind_deg":176,"weather":[{"id":500,"main":"Rain","description":"light
+        rain","icon":"10d"}],"rain":{"1h":0.59}},{"dt":1591725600,"temp":286.29,"feels_like":284.06,"pressure":1019,"humidity":77,"dew_point":282.45,"clouds":100,"wind_speed":2.95,"wind_deg":179,"weather":[{"id":500,"main":"Rain","description":"light
+        rain","icon":"10d"}],"rain":{"1h":0.14}},{"dt":1591729200,"temp":286.67,"feels_like":284.65,"pressure":1019,"humidity":79,"dew_point":283.22,"clouds":100,"wind_speed":2.93,"wind_deg":177,"weather":[{"id":500,"main":"Rain","description":"light
+        rain","icon":"10d"}],"rain":{"1h":0.34}},{"dt":1591732800,"temp":286.44,"feels_like":284.72,"pressure":1020,"humidity":84,"dew_point":283.98,"clouds":100,"wind_speed":2.77,"wind_deg":174,"weather":[{"id":501,"main":"Rain","description":"moderate
+        rain","icon":"10d"}],"rain":{"1h":2.05}},{"dt":1591736400,"temp":287.13,"feels_like":284.92,"pressure":1020,"humidity":81,"dew_point":283.98,"clouds":100,"wind_speed":3.52,"wind_deg":171,"weather":[{"id":500,"main":"Rain","description":"light
+        rain","icon":"10d"}],"rain":{"1h":0.26}},{"dt":1591740000,"temp":288.77,"feels_like":286.45,"pressure":1020,"humidity":76,"dew_point":284.62,"clouds":95,"wind_speed":3.95,"wind_deg":171,"weather":[{"id":500,"main":"Rain","description":"light
+        rain","icon":"10d"}],"rain":{"1h":0.11}},{"dt":1591743600,"temp":290.3,"feels_like":288.44,"pressure":1020,"humidity":71,"dew_point":285.15,"clouds":90,"wind_speed":3.47,"wind_deg":185,"weather":[{"id":804,"main":"Clouds","description":"overcast
+        clouds","icon":"04d"}]},{"dt":1591747200,"temp":289.65,"feels_like":287.83,"pressure":1021,"humidity":76,"dew_point":285.47,"clouds":91,"wind_speed":3.6,"wind_deg":188,"weather":[{"id":804,"main":"Clouds","description":"overcast
+        clouds","icon":"04d"}]},{"dt":1591750800,"temp":288.53,"feels_like":287.21,"pressure":1021,"humidity":81,"dew_point":285.45,"clouds":100,"wind_speed":2.83,"wind_deg":182,"weather":[{"id":804,"main":"Clouds","description":"overcast
+        clouds","icon":"04d"}]},{"dt":1591754400,"temp":289.38,"feels_like":288.38,"pressure":1021,"humidity":78,"dew_point":285.62,"clouds":80,"wind_speed":2.49,"wind_deg":175,"weather":[{"id":803,"main":"Clouds","description":"broken
+        clouds","icon":"04d"}]},{"dt":1591758000,"temp":288.88,"feels_like":288.14,"pressure":1021,"humidity":82,"dew_point":285.93,"clouds":84,"wind_speed":2.24,"wind_deg":178,"weather":[{"id":803,"main":"Clouds","description":"broken
+        clouds","icon":"04d"}]},{"dt":1591761600,"temp":288.32,"feels_like":287.8,"pressure":1021,"humidity":86,"dew_point":286.1,"clouds":88,"wind_speed":2.01,"wind_deg":168,"weather":[{"id":804,"main":"Clouds","description":"overcast
+        clouds","icon":"04n"}]},{"dt":1591765200,"temp":287.85,"feels_like":287.71,"pressure":1022,"humidity":89,"dew_point":286.21,"clouds":81,"wind_speed":1.49,"wind_deg":160,"weather":[{"id":803,"main":"Clouds","description":"broken
+        clouds","icon":"04n"}]},{"dt":1591768800,"temp":287.99,"feels_like":288.2,"pressure":1022,"humidity":88,"dew_point":286.14,"clouds":82,"wind_speed":0.97,"wind_deg":170,"weather":[{"id":803,"main":"Clouds","description":"broken
+        clouds","icon":"04n"}]},{"dt":1591772400,"temp":287.42,"feels_like":287.74,"pressure":1022,"humidity":91,"dew_point":286.03,"clouds":68,"wind_speed":0.79,"wind_deg":143,"weather":[{"id":803,"main":"Clouds","description":"broken
+        clouds","icon":"04n"}]},{"dt":1591776000,"temp":286.92,"feels_like":287.12,"pressure":1021,"humidity":93,"dew_point":285.82,"clouds":58,"wind_speed":0.89,"wind_deg":129,"weather":[{"id":803,"main":"Clouds","description":"broken
+        clouds","icon":"04n"}]},{"dt":1591779600,"temp":286.78,"feels_like":286.81,"pressure":1021,"humidity":94,"dew_point":285.85,"clouds":57,"wind_speed":1.14,"wind_deg":130,"weather":[{"id":803,"main":"Clouds","description":"broken
+        clouds","icon":"04n"}]},{"dt":1591783200,"temp":287,"feels_like":287.25,"pressure":1021,"humidity":92,"dew_point":285.88,"clouds":66,"wind_speed":0.78,"wind_deg":130,"weather":[{"id":803,"main":"Clouds","description":"broken
+        clouds","icon":"04n"}]},{"dt":1591786800,"temp":287.17,"feels_like":287.56,"pressure":1020,"humidity":91,"dew_point":285.87,"clouds":73,"wind_speed":0.58,"wind_deg":172,"weather":[{"id":803,"main":"Clouds","description":"broken
+        clouds","icon":"04n"}]},{"dt":1591790400,"temp":286.99,"feels_like":287.59,"pressure":1020,"humidity":91,"dew_point":285.68,"clouds":76,"wind_speed":0.2,"wind_deg":237,"weather":[{"id":803,"main":"Clouds","description":"broken
+        clouds","icon":"04n"}]},{"dt":1591794000,"temp":287.2,"feels_like":287.6,"pressure":1020,"humidity":90,"dew_point":285.74,"clouds":100,"wind_speed":0.51,"wind_deg":213,"weather":[{"id":804,"main":"Clouds","description":"overcast
+        clouds","icon":"04d"}]},{"dt":1591797600,"temp":287.7,"feels_like":288.21,"pressure":1020,"humidity":88,"dew_point":285.81,"clouds":100,"wind_speed":0.42,"wind_deg":117,"weather":[{"id":804,"main":"Clouds","description":"overcast
+        clouds","icon":"04d"}]},{"dt":1591801200,"temp":288.2,"feels_like":288.62,"pressure":1019,"humidity":86,"dew_point":285.93,"clouds":100,"wind_speed":0.61,"wind_deg":85,"weather":[{"id":804,"main":"Clouds","description":"overcast
+        clouds","icon":"04d"}]},{"dt":1591804800,"temp":290.79,"feels_like":291.14,"pressure":1019,"humidity":73,"dew_point":286.1,"clouds":88,"wind_speed":0.72,"wind_deg":173,"weather":[{"id":804,"main":"Clouds","description":"overcast
+        clouds","icon":"04d"}]},{"dt":1591808400,"temp":292.39,"feels_like":292.53,"pressure":1018,"humidity":66,"dew_point":286.12,"clouds":82,"wind_speed":1.01,"wind_deg":219,"weather":[{"id":803,"main":"Clouds","description":"broken
+        clouds","icon":"04d"}]},{"dt":1591812000,"temp":290.98,"feels_like":291.67,"pressure":1018,"humidity":72,"dew_point":285.98,"clouds":86,"wind_speed":0.22,"wind_deg":245,"weather":[{"id":804,"main":"Clouds","description":"overcast
+        clouds","icon":"04d"}]},{"dt":1591815600,"temp":295.48,"feels_like":295.46,"pressure":1018,"humidity":52,"dew_point":285.43,"clouds":58,"wind_speed":0.91,"wind_deg":203,"weather":[{"id":803,"main":"Clouds","description":"broken
+        clouds","icon":"04d"}]},{"dt":1591819200,"temp":297.28,"feels_like":296.25,"pressure":1017,"humidity":44,"dew_point":284.32,"clouds":40,"wind_speed":1.98,"wind_deg":223,"weather":[{"id":802,"main":"Clouds","description":"scattered
+        clouds","icon":"03d"}]}],"daily":[{"dt":1591646400,"sunrise":1591618941,"sunset":1591675063,"temp":{"day":289.31,"min":284.83,"max":290.79,"night":284.83,"eve":290.2,"morn":289.31},"feels_like":{"day":286.58,"night":281.24,"eve":287.35,"morn":286.58},"pressure":1025,"humidity":67,"dew_point":283.19,"wind_speed":3.97,"wind_deg":226,"weather":[{"id":500,"main":"Rain","description":"light
+        rain","icon":"10d"}],"clouds":90,"rain":1.48,"uvi":7.41},{"dt":1591732800,"sunrise":1591705325,"sunset":1591761501,"temp":{"day":287.13,"min":285.26,"max":289.65,"night":286.78,"eve":288.88,"morn":285.26},"feels_like":{"day":284.92,"night":286.81,"eve":288.14,"morn":283.07},"pressure":1020,"humidity":81,"dew_point":283.98,"wind_speed":3.52,"wind_deg":171,"weather":[{"id":501,"main":"Rain","description":"moderate
+        rain","icon":"10d"}],"clouds":100,"rain":5.11,"uvi":7.65},{"dt":1591819200,"sunrise":1591791712,"sunset":1591847937,"temp":{"day":297.96,"min":288.2,"max":297.96,"night":288.75,"eve":293.91,"morn":288.2},"feels_like":{"day":296.13,"night":287.95,"eve":291.93,"morn":288.62},"pressure":1017,"humidity":40,"dew_point":283.82,"wind_speed":2.79,"wind_deg":225,"weather":[{"id":500,"main":"Rain","description":"light
+        rain","icon":"10d"}],"clouds":29,"rain":0.27,"uvi":8.22},{"dt":1591905600,"sunrise":1591878102,"sunset":1591934370,"temp":{"day":297.94,"min":287.94,"max":297.94,"night":287.94,"eve":293.44,"morn":289.33},"feels_like":{"day":295.77,"night":287.3,"eve":291.94,"morn":289.09},"pressure":1015,"humidity":32,"dew_point":280.18,"wind_speed":2.09,"wind_deg":223,"weather":[{"id":500,"main":"Rain","description":"light
+        rain","icon":"10d"}],"clouds":64,"rain":2.67,"uvi":7.84},{"dt":1591992000,"sunrise":1591964494,"sunset":1592020802,"temp":{"day":286.08,"min":283.62,"max":287.57,"night":283.62,"eve":287.57,"morn":285.96},"feels_like":{"day":283.19,"night":280.84,"eve":286.06,"morn":284.62},"pressure":1012,"humidity":83,"dew_point":283.33,"wind_speed":4.24,"wind_deg":202,"weather":[{"id":502,"main":"Rain","description":"heavy
+        intensity rain","icon":"10d"}],"clouds":100,"rain":19.48,"uvi":7.9},{"dt":1592078400,"sunrise":1592050888,"sunset":1592107232,"temp":{"day":290.66,"min":284.73,"max":291.18,"night":285.36,"eve":288.86,"morn":284.73},"feels_like":{"day":287.24,"night":282.74,"eve":285.39,"morn":281.95},"pressure":1015,"humidity":50,"dew_point":280.34,"wind_speed":3.88,"wind_deg":248,"weather":[{"id":501,"main":"Rain","description":"moderate
+        rain","icon":"10d"}],"clouds":79,"rain":6.08,"uvi":7.69},{"dt":1592164800,"sunrise":1592137284,"sunset":1592193659,"temp":{"day":293,"min":284.88,"max":294.2,"night":287.3,"eve":291.72,"morn":284.88},"feels_like":{"day":289.71,"night":284.72,"eve":289.3,"morn":282.63},"pressure":1014,"humidity":37,"dew_point":278.07,"wind_speed":3.01,"wind_deg":225,"weather":[{"id":500,"main":"Rain","description":"light
+        rain","icon":"10d"}],"clouds":42,"rain":0.55,"uvi":8.37},{"dt":1592251200,"sunrise":1592223683,"sunset":1592280084,"temp":{"day":293.9,"min":286.41,"max":293.9,"night":286.41,"eve":289.09,"morn":287.31},"feels_like":{"day":292.91,"night":285.28,"eve":287.01,"morn":285.43},"pressure":1016,"humidity":50,"dew_point":283.28,"wind_speed":1.46,"wind_deg":169,"weather":[{"id":501,"main":"Rain","description":"moderate
+        rain","icon":"10d"}],"clouds":99,"rain":7.37,"uvi":8.22}]}'
+  recorded_at: Mon, 08 Jun 2020 21:20:50 GMT
+recorded_with: VCR 6.0.0
