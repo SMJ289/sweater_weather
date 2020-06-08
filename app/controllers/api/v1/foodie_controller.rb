@@ -1,8 +1,7 @@
 class Api::V1::FoodieController < ApplicationController
   def show
-
-    travel_info = GoogleService.new.travel_info(params['start'], params['end'])
-    travel = TravelInfo.new(travel_info)
+    travel_search_results = TravelSearch.new
+    travel = travel_search_results.travel_data(params['start'], params['end'])
     
     search_results = WeatherSearch.new
     destination_weather = search_results.weather(params['end'])
@@ -10,7 +9,6 @@ class Api::V1::FoodieController < ApplicationController
 
     restaurant_search_results = RestaurantSearch.new
     restaurant = restaurant_search_results.restaurant(params['search'],travel.destination_lat, travel.destination_lng)
-
 
     destination_info = DestinationInfo.new(travel, weather, restaurant)
 
