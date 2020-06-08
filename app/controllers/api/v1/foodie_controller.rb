@@ -17,9 +17,12 @@ class Api::V1::FoodieController < ApplicationController
       req.params['lat'] = travel_object.destination_lat
       req.params['lon'] = travel_object.destination_lng
       req.params['cuisines'] = 55
+      req.params['count'] = 1
     end
 
     json = JSON.parse(response.body, symbolize_names: true)
+
+    restaurant_object = DestinationRestaurant.new(json)
     binding.pry
   end
 
