@@ -3,6 +3,7 @@ class ArrivalWeather
               :description
 
   def initialize(weather, travel)
+    weather = hourly_weather(weather)
     @temp = arrival_forecast(weather, travel).temp
     @description = arrival_forecast(weather, travel).description
   end
@@ -16,6 +17,12 @@ class ArrivalWeather
   def arrival_hour(travel)
     arrival_time = Time.now + travel.time_sec.seconds
     format_time(arrival_time)
+  end
+
+  def hourly_weather(weather)
+    weather[:hourly].map do |hour|
+      HourlyWeather.new(hour)
+    end 
   end
   
   def format_time(dt)
