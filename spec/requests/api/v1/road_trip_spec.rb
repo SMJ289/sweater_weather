@@ -45,8 +45,24 @@ RSpec.describe 'Road Trip API', :vcr do
     }
 
     post '/api/v1/road_trip', params: body, as: :json
+    json = JSON.parse(response.body, symbolize_names: true)
 
-    expect(response.status).to eq(401)
+    expect(response.status).to eq(400)
+    expect(json[:message]).to eq('One or more fields missing.')
   end
 
+  it 'returns error if a parameter is missing' do
+    user = User.create(email: 'email@example.com', password: 'password', password_confirmation: 'password')
+    body = {
+      'origin': 'Denver, CO',
+      'destination': nil,
+      'api_key': user.api_key
+    }
+
+    post '/api/v1/road_trip', params: body, as: :json
+    json = JSON.parse(response.body, symbolize_names: true)
+
+    expect(response.status).to eq(400)
+    expect(json[:message]).to eq('One or more fields missing.')
+  end
 end
