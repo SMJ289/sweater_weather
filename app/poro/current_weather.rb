@@ -30,19 +30,20 @@ class CurrentWeather
   end
 
   def kelvin_to_fahrenheit(temp)
-    (temp * 9/5 - 459.67).round
+    (temp * 9 / 5 - 459.67).round
   end
 
-  def format_time(dt)
-    Time.at(dt).strftime('%I:%M %p')
+  def format_time(datetime)
+    Time.zone.at(datetime).strftime('%I:%M %p')
   end
 
-  def format_date(dt)
-    Time.at(dt).strftime('%B %d')
+  def format_date(datetime)
+    Time.zone.at(datetime).strftime('%B %d')
   end
 
   def meters_to_miles(meters)
     return 'n/a' if meters.nil?
+
     (meters / 1609).round
   end
 end

@@ -19,8 +19,8 @@ class GoogleService
   def conn
     Faraday.new(
       url: 'https://maps.googleapis.com/',
-      params: {key: ENV['GOOGLE_API_KEY']},
-      headers: {'Content-Type' => 'application/json'}
-      )
+      params: { key: ENV['GOOGLE_API_KEY'] },
+      headers: { 'Content-Type' => 'application/json' }
+    )
   end
 end

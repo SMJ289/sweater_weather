@@ -15,11 +15,11 @@ class DailyWeather
     @rain = data[:rain]
   end
 
-  def format_date(dt)
-    Time.at(dt).strftime('%A, %b %d')
+  def format_date(datetime)
+    Time.zone.at(datetime).strftime('%A, %b %d')
   end
 
   def kelvin_to_fahrenheit(temp)
-    (temp * 9/5 - 459.67).round
+    (temp * 9 / 5 - 459.67).round
   end
 end

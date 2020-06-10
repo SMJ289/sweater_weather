@@ -11,11 +11,11 @@ class HourlyWeather
     @description = data[:weather].first[:description]
   end
 
-  def format_time(dt)
-    Time.at(dt).strftime('%l %p')
+  def format_time(datetime)
+    Time.zone.at(datetime).strftime('%l %p')
   end
 
   def kelvin_to_fahrenheit(temp)
-    (temp * 9/5 - 459.67).round
+    (temp * 9 / 5 - 459.67).round
   end
 end

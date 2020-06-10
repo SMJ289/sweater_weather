@@ -4,14 +4,14 @@ class UnsplashService
       req.params['query'] = location
     end
 
-    json = JSON.parse(resp.body, symbolize_names: true)
+    JSON.parse(resp.body, symbolize_names: true)
   end
 
   def conn
-    conn = Faraday.new(
+    Faraday.new(
       url: 'https://api.unsplash.com/',
-      params: {client_id: ENV['UNSPLASH_API_KEY']},
-      headers: {'Content-Type' => 'application/json'}
+      params: { client_id: ENV['UNSPLASH_API_KEY'] },
+      headers: { 'Content-Type' => 'application/json' }
     )
   end
 end
