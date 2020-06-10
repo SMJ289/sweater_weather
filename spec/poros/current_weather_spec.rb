@@ -28,11 +28,11 @@ RSpec.describe CurrentWeather, :vcr do
   end
 
   it '.format_time()' do
-    expect(@current_weather.format_time(1591501730)).to eq("09:48 PM")
+    expect(@current_weather.format_time(1591501730, '%I:%M %p')).to eq("09:48 PM")
   end
 
   it '.format_date()' do
-    expect(@current_weather.format_date(1591501730)).to eq("June 06")
+    expect(@current_weather.format_date(1591501730, '%B %d')).to eq("June 06")
   end
 
   it '.meters_to_miles()' do

@@ -22,6 +22,6 @@ RSpec.describe DailyWeather, :vcr do
   end
 
   it '.format_time()' do
-    expect(@hourly_weather.first.format_time(1591560000)).to eq(" 2 PM")
+    expect(@hourly_weather.first.format_time(1591560000, '%l %p')).to eq(" 2 PM")
   end
 end

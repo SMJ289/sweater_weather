@@ -24,6 +24,6 @@ RSpec.describe DailyWeather, :vcr do
   end
 
   it '.format_date()' do
-    expect(@daily_weather.first.format_date(1591466400)).to eq("Saturday, Jun 06")
+    expect(@daily_weather.first.format_date(1591466400, '%A, %b %d')).to eq("Saturday, Jun 06")
   end
 end
