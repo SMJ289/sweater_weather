@@ -1,6 +1,7 @@
 class Api::V1::RoadTripController < ApplicationController
   def show
     return render json: {message: 'One or more fields missing.'}, status: 400 if params_missing?
+    
     if User.exists?(api_key: road_trip_params[:api_key])
       render json: RoadTripSerializer.new(trip_info)
     else
