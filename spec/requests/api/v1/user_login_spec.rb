@@ -34,4 +34,20 @@ RSpec.describe 'User Login API', :vcr do
 
     expect(json[:message]).to eq('Invalid credentials.')
   end
+
+  it 'User cannot login with blank fields' do
+    user = User.create(email: 'email@example.com', password: 'password', password_confirmation: 'password')
+    
+    user_info = {
+      'email': '',
+      'password': ''
+    }
+    post '/api/v1/sessions', params: user_info, as: :json
+
+    expect(response.status).to eq(400)
+    
+    json = JSON.parse(response.body, symbolize_names: true)
+
+    expect(json[:message]).to eq('Invalid credentials.')
+  end
 end
