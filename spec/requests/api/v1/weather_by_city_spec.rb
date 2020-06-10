@@ -33,4 +33,15 @@ RSpec.describe 'Forcast API' do
     expect(forecast_response[:data][:attributes][:hourly].first[:temp]).to be_present
     expect(forecast_response[:data][:attributes][:hourly].first[:icon]).to be_present
   end
+
+  it 'returns error if param is missing' do
+    location = ""
+
+    get "/api/v1/forecast?location=#{location}"
+    expect(response.status).to eq(400)
+
+    forecast_response = JSON.parse(response.body, symbolize_names: true)
+    expect(forecast_response[:message]).to eq('Location not given.')
+    
+  end
 end
