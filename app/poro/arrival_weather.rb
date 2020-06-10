@@ -13,19 +13,19 @@ class ArrivalWeather
       hour_weather.time == arrival_hour(travel)
     end
   end
-  
+
   def arrival_hour(travel)
-    arrival_time = Time.now + travel.time_sec.seconds
+    arrival_time = Time.current + travel.time_sec.seconds
     format_time(arrival_time)
   end
 
   def hourly_weather(weather)
     weather[:hourly].map do |hour|
       HourlyWeather.new(hour)
-    end 
+    end
   end
-  
-  def format_time(dt)
-    Time.at(dt).strftime('%l %p')
+
+  def format_time(datetime)
+    Time.zone.at(datetime).strftime('%l %p')
   end
 end

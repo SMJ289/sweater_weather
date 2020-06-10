@@ -1,4 +1,6 @@
 class DailyWeather
+  include Convertable
+
   attr_reader :date,
               :high,
               :low,
@@ -7,19 +9,11 @@ class DailyWeather
               :rain
 
   def initialize(data)
-    @date = format_date(data[:dt])
+    @date = format_date(data[:dt], '%A, %b %d')
     @high = kelvin_to_fahrenheit(data[:temp][:max])
     @low = kelvin_to_fahrenheit(data[:temp][:min])
     @type = data[:weather].first[:main]
     @icon = data[:weather].first[:icon]
     @rain = data[:rain]
-  end
-
-  def format_date(dt)
-    Time.at(dt).strftime('%A, %b %d')
-  end
-
-  def kelvin_to_fahrenheit(temp)
-    (temp * 9/5 - 459.67).round
   end
 end

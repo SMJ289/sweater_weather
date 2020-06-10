@@ -1,4 +1,6 @@
 class CurrentWeather
+  include Convertable
+
   attr_reader :date,
               :time,
               :current_temp,
@@ -14,35 +16,18 @@ class CurrentWeather
               :icon
 
   def initialize(data)
-    @time = format_time(data[:current][:dt])
-    @date = format_date(data[:current][:dt])
+    @time = format_time(data[:current][:dt], '%I:%M %p')
+    @date = format_date(data[:current][:dt], '%B %d')
     @current_temp = kelvin_to_fahrenheit(data[:current][:temp])
     @high = kelvin_to_fahrenheit(data[:daily].first[:temp][:max])
     @low = kelvin_to_fahrenheit(data[:daily].first[:temp][:min])
     @feels_like = kelvin_to_fahrenheit(data[:current][:feels_like])
     @humidity = data[:current][:humidity]
-    @sunrise = format_time(data[:current][:sunrise])
-    @sunset = format_time(data[:current][:sunset])
+    @sunrise = format_time(data[:current][:sunrise], '%I:%M %p')
+    @sunset = format_time(data[:current][:sunset], '%I:%M %p')
     @uv_index = data[:current][:uvi]
     @visibility = meters_to_miles(data[:current][:visibility])
     @type = data[:current][:weather].first[:main]
     @icon = data[:current][:weather].first[:icon]
-  end
-
-  def kelvin_to_fahrenheit(temp)
-    (temp * 9/5 - 459.67).round
-  end
-
-  def format_time(dt)
-    Time.at(dt).strftime('%I:%M %p')
-  end
-
-  def format_date(dt)
-    Time.at(dt).strftime('%B %d')
-  end
-
-  def meters_to_miles(meters)
-    return 'n/a' if meters.nil?
-    (meters / 1609).round
   end
 end
