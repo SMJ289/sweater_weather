@@ -31,6 +31,9 @@ $ rails db:create
 $ rails db:migrate
 $ bundle exec figaro install
 ```
+
+Run `$ rails s` to start the server and interact with the endpoints with [Postman](https://www.postman.com/)
+
 **Additionally**
 You will need to provide the following API keys
 
