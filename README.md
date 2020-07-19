@@ -13,9 +13,11 @@ To simulate working with a front end team, I was provided with the following wir
 ### Registration
 
 <img src="https://backend.turing.io/module3/projects/sweater_weather/images/sign_up.png" width=75% height=75%>
+
 ### Login
 
 <img src="https://backend.turing.io/module3/projects/sweater_weather/images/login.png" width=75% height=75%>
+
 ### Road Trip
 
 <img src="https://backend.turing.io/module3/projects/sweater_weather/images/road_trip.png" width=75% height=75%>
