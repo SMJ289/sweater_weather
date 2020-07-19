@@ -1,18 +1,24 @@
+[![Build Status](https://travis-ci.com/smj289/sweater_weather.png?branch=master)](https://travis-ci.com/smj289/sweater_weather)
+![Coverage](https://img.shields.io/badge/coverage-100%25-brightgreen)
 # Sweater Weather API
 
 ## About
-Sweater Weather is a REST API for an application that allows users to see and plan road trips based on current and destination weather.
+Sweater Weather is a REST API for an application that allows users to  plan road trips based on current and destination weather.
 
-To simulate a working with a front end team, I was provided with the following wireframes and instructed to build out the required endpoints.
+To simulate working with a front end team, I was provided with the following wireframes and instructed to build out the required endpoints.
 
 ### Application Landing Page
+
 ![Wireframe 1](https://backend.turing.io/module3/projects/sweater_weather/images/root.png)
 ### Registration
-![Wireframe 2](https://backend.turing.io/module3/projects/sweater_weather/images/sign_up.png)
+
+<img src="https://backend.turing.io/module3/projects/sweater_weather/images/sign_up.png" width=75% height=75%>
 ### Login
-![Wireframe 3](https://backend.turing.io/module3/projects/sweater_weather/images/login.png)
+
+<img src="https://backend.turing.io/module3/projects/sweater_weather/images/login.png" width=75% height=75%>
 ### Road Trip
-![Wireframe 4](https://backend.turing.io/module3/projects/sweater_weather/images/road_trip.png)
+
+<img src="https://backend.turing.io/module3/projects/sweater_weather/images/road_trip.png" width=75% height=75%>
 
 ## Setup
 ```
@@ -23,7 +29,7 @@ $ rails db:create
 $ rails db:migrate
 $ bundle exec figaro install
 ```
-**Additonally**
+**Additionally**
 You will need to provide the following API keys
 
 - [Google Geocoding](https://console.cloud.google.com/apis/library/geocoding-backend.googleapis.com)
